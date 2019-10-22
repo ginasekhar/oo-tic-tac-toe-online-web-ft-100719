@@ -48,10 +48,11 @@ class TicTacToe
   end #valid_move
   
   def turn 
-    
+    puts "Enter a number between 1 and 9"
     user_input = gets.chomp
     index = input_to_index(user_input)
     while !valid_move?(index) do
+      puts "Enter a number between 1 and 9"
       user_input = gets.chomp
       index = input_to_index(user_input)
     end
@@ -94,6 +95,8 @@ class TicTacToe
   end
   
   def play 
+    
+    puts "Let's play TicTacToe"
     while !over? do
       turn
     end 
